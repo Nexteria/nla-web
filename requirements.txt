@@ -1,0 +1,7 @@
+Django==1.9.2
+django-bootstrap3==6.2.2
+django-widget-tweaks==1.4.1
+gunicorn==19.4.5
+infinario==2.0.1
+requests==2.13.0
+

@@ -1,0 +1,6 @@
+*.sqlite*
+*.log
+media/uploads/**/*
+.idea/*
+.env
+__pycache__/*

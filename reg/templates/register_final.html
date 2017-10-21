@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+{% load bootstrap3 %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="subpage-form">
+
+<script type="text/javascript">
+  $(function() {
+     $("input:file").change(function (){
+       $(this).addClass('picked');
+     });
+  });
+</script>
+	<section class="subpage-form-1">
+    	<div class="wrapper">
+        	<h1 class="underlined center">Dokončenie registrácie</h1>
+            <p class="">Pre dokončenie registrácie potrebujeme tvoje CV a Motivačný list. Môžeš ich nahrať priamo tu, alebo zaslať neskôr na mail jakub@nexteria.sk.</p>
+            <p class="">V prípade, že sa ti nepodarí registráciu dokončiť dnes, budeme ťa kontaktovať mailom v priebehu nasledujúcich dvoch dní.</p>
+
+        	<form class="main-form" name="main-form" method="post" action="/register/{{ form.instance.token }}/final" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.non_field_errors }}
+
+            	<div class="row">
+                    <input type="hidden" name="token" value="{{ form.instance.token }}" />
+                    <div class="form-line half pull-left" id="cv">
+                        <!--<input type="file" name="mf-cv" id="mf-cv" accept="application/pdf, image/*" required>-->
+                        {{ form.cv }}
+                        <!--<label for="mf-cv">Nahraj svoje CV<i class="fa fa-check"></i></label>-->
+                        {{ form.cv.errors }}
+                    </div>
+                    <div class="form-line half extra pull-right">
+                        <p>Vzor dobrého CV od šéfa slovenského Googlu, Rasťa Kulicha, nájdeš <a href="https://docs.google.com/presentation/d/1qs_GAM6UGr_HeEQPdF06Xf2RCqZTexvG0n_aWUD73eg/edit?usp=sharing" target="_blank">tu.</a></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-line half pull-left" id="list">
+                        <!--<input type="file" name="mf-cl" id="mf-cl" accept="application/pdf, image/*" required>
+                        <label for="mf-cl">Nahraj svoj motivační list<i class="fa fa-check"></i></label>-->
+                        {{ form.list }}
+                        {{ form.list.errors }}
+                    </div>
+                    <div class="form-line half extra pull-right">
+                        <p><a href="/motivacny_list" target="_blank">Návod ako napísať motivačný list nájdeš tu</a></p>
+                    </div>
+                </div>
+                <div class="form-line">
+				    <input type="submit" class="button yellow" name="mf-submit" value="Dokončiť registráciu">
+                </div>
+            </form>
+
+        </div>
+    </section>
+    <section class="subpage-form-3">
+    	<div class="wrapper">
+        	<h2 class="underlined center">V krátkosti o výberovom procese</h2>
+            <p class="perex">Výberový proces je stupňovitý, to znamená, že po každom kole sa dozvieš, či postupuješ ďalej alebo nie.<br> Prvé výberové kolá začínajú v januári 2017. Prihlášky registrujeme počas celého roka.</p>
+            <div class="timeline">
+            	<div class="start">
+                	<p class="big">1.</p>
+                    <p>bod</p>
+                </div>
+                <div class="zero">Zaslanie<br>prihlášky</div>
+                <div class="line one">
+                	<div class="point">
+                    	<p class="little">1. kolo</p>
+                        <p>Vyhodnotenie prihlášky,<br>CV a motivačného listu</p>
+                    </div>
+                </div>
+                <div class="line two">
+                	<div class="point">
+                    	<p class="little">2. kolo</p>
+                        <p>Prezentácia Nexterie<br>analytický test<br>10 minútové interview</p>
+                    </div>
+                </div>
+                <div class="line three">
+                	<div class="point">
+                    	<p class="little">3. kolo</p>
+                        <p>Skupinové diskusie</p>
+                    </div>
+                </div>
+                <div class="line four">
+                	<div class="point">
+                    	<p class="little">4. kolo</p>
+                        <p>Osobný pohovor</p>
+                    </div>
+                </div>
+                <div class="last">
+                	<p>Finálne rozhodnutie o prijatí / neprijatí</p>
+                </div>
+                <div class="cil">
+                	<p><i class="fa fa-check"></i></p>
+                </div>
+            </div>
+        </div>
+    </section>
+<section class="faq">
+    <div class="wrapper">
+    	<a href="http://nexteria.sk/som-student/ing/faq/" target="_blank">Často kladené otázky</a>
+    </div>
+</section>
+</div>
+{% endblock %}

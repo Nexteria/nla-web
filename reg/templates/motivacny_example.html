@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+{% load bootstrap3 %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="subpage-form">
+
+<script type="text/javascript">
+  $(function() {
+     $("input:file").change(function (){
+       $(this).addClass('picked');
+     });
+  });
+</script>
+	<section class="subpage-form-1">
+    	<div class="wrapper">
+            <img src="{% static 'images/graphic/motivacny_example.png' %}" class="motivacny-example" alt="">
+        </div>
+    </section>
+    <section class="subpage-form-3">
+    	<div class="wrapper">
+        	<h2 class="underlined center">V krátkosti o výberovom procese</h2>
+            <p class="perex">Výberový proces je stupňovitý, to znamená, že po každom kole sa dozvieš, či postupuješ ďalej alebo nie.<br> Prvé výberové kolá začínajú v januári 2017. Prihlášky registrujeme počas celého roka.</p>
+            <div class="timeline">
+            	<div class="start">
+                	<p class="big">1.</p>
+                    <p>bod</p>
+                </div>
+                <div class="zero">Zaslanie<br>prihlášky</div>
+                <div class="line one">
+                	<div class="point">
+                    	<p class="little">1. kolo</p>
+                        <p>Vyhodnotenie prihlášky,<br>CV a motivačného listu</p>
+                    </div>
+                </div>
+                <div class="line two">
+                	<div class="point">
+                    	<p class="little">2. kolo</p>
+                        <p>Prezentácia Nexterie<br>analytický test<br>10 minútové interview</p>
+                    </div>
+                </div>
+                <div class="line three">
+                	<div class="point">
+                    	<p class="little">3. kolo</p>
+                        <p>Skupinové diskusie</p>
+                    </div>
+                </div>
+                <div class="line four">
+                	<div class="point">
+                    	<p class="little">4. kolo</p>
+                        <p>Osobný pohovor</p>
+                    </div>
+                </div>
+                <div class="last">
+                	<p>Finálne rozhodnutie o prijatí / neprijatí</p>
+                </div>
+                <div class="cil">
+                	<p><i class="fa fa-check"></i></p>
+                </div>
+            </div>
+        </div>
+    </section>
+<section class="faq">
+    <div class="wrapper">
+    	<a href="http://nexteria.sk/som-student/ing/faq/" target="_blank">Často kladené otázky</a>
+    </div>
+</section>
+</div>
+{% endblock %}

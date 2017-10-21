@@ -1,0 +1,109 @@
+{% load staticfiles %}
+{% load bootstrap3 %}
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:site_name" content="Nexteria" />
+<meta property="og:title" content="Nexteria Leadership Academy" />
+<meta property="og:image:width" content="400" />
+<meta property="og:image:height" content="267" />
+<meta property="og:description" content="3-ročný intenzívny vzdelávací program popri vysokej škole – Intenzívne rozvíjame praktické zručnosti, silné vzťahy a etické hodnoty v úzkej rôznorodej skupine top študentov, ktorí majú ambíciu a potenciál byť lídrami v biznise, politike a iných dôležitých oblastiach spoločnosti. Prihlás sa!" />
+<meta property="og:image" content="http://nla.nexteria.sk{% static 'images/graphic/fb-share-photo.jpg' %}" />
+<link rel="image_src" href="{% static 'images/graphic/logo.png' %}" />
+<meta property="og:url" content="https://nla.nexteria.sk" />
+<link rel="icon" href="{% static 'favicon.ico' %}">
+
+<title>Nexteria Leadership Academy | 3-ročný vzdelávací program</title>
+<meta name="description" content="Meníme budúcnosť Slovenska prípravou novej generácie slušných a schopných mladých ľudí.">
+<meta name="keywords" content="nexteria, vzdelavanie, leadership, program, rozvojovy">
+
+<script type="text/javascript">!function(i,t){function e(e){return function(){var n=arguments;if("initialize"==e&&n&&n[0].modify&&n[0].modify.overlay&&"loading"==t.readyState){var a="__inf__overlay__";t.write('<div id="'+a+'" style="position:absolute;background:#fff;left:0;top:0;width:100%;height:100%;z-index:1000000"></div>'),setTimeout(function(){var e=t.getElementById(a);e&&t.body.removeChild(e),i.infinario.__=!0},n[0].modify.delay||500)}this._.push([e,arguments])}}if(!i.infinario){var n,a,o="initialize identify update track trackLink trackEnhancedEcommerce getHtml showHtml showForm ping getAbTest".split(" "),r=t.createElement("script"),d="https:"===t.location.protocol?"https:":"http:";for(i.infinario={_:[]},a=0;a<o.length;a++)n=o[a],i.infinario[n]=e(n);r.type="text/javascript",r.async=!0,r.src=d+"//api.exponea.com/js/infinario-1.7.min.js",t.getElementsByTagName("head")[0].appendChild(r)}}(window,document);</script>
+<script type="text/javascript">
+    infinario.initialize({ 
+        target: "{{ exponea_target }}",
+        token: "{{ exponea_token }}",
+        track: { visits: true },
+        modify: {
+            enabled: true, 
+            overlay: false, 
+            delay: 500
+        }
+    });
+</script>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script async src="https://www.youtube.com/iframe_api"></script>
+
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+<script src="{% static 'js/filestyle.min.js' %}"></script>
+<script src="{% static 'js/custom.js' %}?v=0.26"></script>
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}?v=0.26">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+ fbq('init', '1839630742923861'); 
+fbq('track', 'PageView');
+</script>
+<!-- End Facebook Pixel Code -->
+</head>
+
+<body>
+
+{% block header %}
+    <header>
+	<div class="wrapper">
+    	<a href="{% url 'index' %}"><h2 class="logo"><img src="{% static 'images/graphic/logo.png' %}" alt="nexteria"></h2></a>
+        <div class="right">
+        	<h2 class="subtitle">Nexteria facebook</h2>
+            <a href="https://www.facebook.com/nexteria" target="_blank" class="fb"><i class="fa fa-facebook"></i></a>
+        </div>
+    </div>
+</header>
+{% endblock %}
+
+{% block content %}
+{% endblock %}
+
+
+{% block footer %}
+    <footer>
+	<div class="wrapper">
+    	<div class="content">
+        	<div class="col left">
+                <h3 class="underlined">Máš otázky?</h3>
+                <p>Skús <a href="http://nexteria.sk/som-student/ing/faq/" target="_blank" >FAQ</a> alebo nám napíš.</p>
+                <p>Jakub ti rád pomôže</p>
+                <p><a href="mailto:jakub@nexteria.sk">jakub@nexteria.sk</a></p>
+            </div>
+            <div class="col right">
+            	<p>© 2016 Nexteria, Všetky práva vyhradené</p>
+                <p><a href="mailto:jakub@nexteria.sk">Napíš nám</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+{% endblock %}
+
+<noscript>
+ <img height="1" width="1" 
+src="https://www.facebook.com/tr?id=1839630742923861&ev=PageView
+&noscript=1"/>
+</noscript>
+
+</body>
+</html>
+
