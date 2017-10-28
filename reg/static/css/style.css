@@ -308,7 +308,7 @@ header .right h2{
 	display:inline-block;
 	margin:0;
 }
-header .right .fb{
+header .right .social-network{
 	display:inline-block;
 	width:36px;
 	height:36px;
@@ -1163,6 +1163,15 @@ footer .col a{
 	color: #f00;
 }
 
+.subpage-form-1 .main-form .deadline {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.subpage-form-1 .main-form .deadline time {
+	font-weight: bolder;
+}
+
 .subpage-form-1 .motivacny-example {
 	max-width: 80%;
 }
@@ -1283,6 +1292,7 @@ footer .col a{
 	border:none;
 	margin-top:25px;
 }
+
 .subpage-form-2{
 	
 }

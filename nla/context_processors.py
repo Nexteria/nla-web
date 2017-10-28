@@ -1,8 +1,7 @@
 from django.conf import settings
 
 
-def exponea(_):
+def insert_config(_):
     return {
-        'exponea_token': settings.EXPONEA_TOKEN,
-        'exponea_target': settings.EXPONEA_TARGET,
+        'settings': settings.SETTINGS_IN_VIEWS,
     }

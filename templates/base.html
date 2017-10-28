@@ -22,8 +22,8 @@
 <script type="text/javascript">!function(i,t){function e(e){return function(){var n=arguments;if("initialize"==e&&n&&n[0].modify&&n[0].modify.overlay&&"loading"==t.readyState){var a="__inf__overlay__";t.write('<div id="'+a+'" style="position:absolute;background:#fff;left:0;top:0;width:100%;height:100%;z-index:1000000"></div>'),setTimeout(function(){var e=t.getElementById(a);e&&t.body.removeChild(e),i.infinario.__=!0},n[0].modify.delay||500)}this._.push([e,arguments])}}if(!i.infinario){var n,a,o="initialize identify update track trackLink trackEnhancedEcommerce getHtml showHtml showForm ping getAbTest".split(" "),r=t.createElement("script"),d="https:"===t.location.protocol?"https:":"http:";for(i.infinario={_:[]},a=0;a<o.length;a++)n=o[a],i.infinario[n]=e(n);r.type="text/javascript",r.async=!0,r.src=d+"//api.exponea.com/js/infinario-1.7.min.js",t.getElementsByTagName("head")[0].appendChild(r)}}(window,document);</script>
 <script type="text/javascript">
     infinario.initialize({ 
-        target: "{{ exponea_target }}",
-        token: "{{ exponea_token }}",
+        target: "{{ settings.exponea_target }}",
+        token: "{{ settings.exponea_token }}",
         track: { visits: true },
         modify: {
             enabled: true, 
@@ -68,8 +68,9 @@ fbq('track', 'PageView');
 	<div class="wrapper">
     	<a href="{% url 'index' %}"><h2 class="logo"><img src="{% static 'images/graphic/logo.png' %}" alt="nexteria"></h2></a>
         <div class="right">
-        	<h2 class="subtitle">Nexteria facebook</h2>
-            <a href="https://www.facebook.com/nexteria" target="_blank" class="fb"><i class="fa fa-facebook"></i></a>
+            <a href="https://medium.com/@Nexteria" target="_blank" class="social-network"><i class="fa fa-medium"></i></a>
+            <a href="https://www.linkedin.com/school/1187945/" target="_blank" class="social-network"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/nexteria" target="_blank" class="social-network"><i class="fa fa-facebook"></i></a>
         </div>
     </div>
 </header>
@@ -86,12 +87,12 @@ fbq('track', 'PageView');
         	<div class="col left">
                 <h3 class="underlined">Máš otázky?</h3>
                 <p>Skús <a href="http://nexteria.sk/som-student/ing/faq/" target="_blank" >FAQ</a> alebo nám napíš.</p>
-                <p>Jakub ti rád pomôže</p>
-                <p><a href="mailto:jakub@nexteria.sk">jakub@nexteria.sk</a></p>
+                <p>{{ settings.registration_name }} ti rada pomôže</p>
+                <p><a href="mailto:{{ settings.registration_email }}">{{ settings.registration_email }}</a></p>
             </div>
             <div class="col right">
-            	<p>© 2016 Nexteria, Všetky práva vyhradené</p>
-                <p><a href="mailto:jakub@nexteria.sk">Napíš nám</a></p>
+            	<p>© 2017 Nexteria, Všetky práva vyhradené</p>
+                <p><a href="mailto:{{ settings.registration_email }}">Napíš nám</a></p>
             </div>
         </div>
     </div>

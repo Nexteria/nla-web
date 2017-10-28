@@ -27,10 +27,21 @@ EXPONEA_TARGET = '//api.exponea.com'
 # don't track registrations in development
 EXPONEA_TRACK_REGISTRATION = False
 
+REGISTRATION_PERSON_EMAIL = "betka@nexteria.sk"
+REGISTRATION_PERSON_NAME = "Betka"
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = ['nla.nexteria.sk', 'localhost', '127.0.0.1']
+
+SETTINGS_IN_VIEWS = {
+    'exponea_token': EXPONEA_TOKEN,
+    'exponea_target': EXPONEA_TARGET,
+    'registration_email': REGISTRATION_PERSON_EMAIL,
+    'registration_name': REGISTRATION_PERSON_NAME,
+    'registration_year': '2018',
+}
 
 
 # Application definition
@@ -71,7 +82,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'nla.context_processors.exponea',
+                'nla.context_processors.insert_config',
             ],
         },
     },

@@ -42,14 +42,10 @@
                 	{{ form.telefon }}
                     {{ form.telefon.errors }}
                 </div>
-                <div class="form-line">
-                	{{ form.uspech }}
-                    {{ form.uspech.errors }}
-                </div>
                 <div class="volitelne">
                 	<p class="vol-head">Voliteľné</p>
                 	<div class="form-line">
-                        <span class="little">Ako si sa o nás odzvedel</span>
+                        <span class="little">Ako si sa o nás dozvedel/a</span>
                     	<!--<input type="text" name="mf-ref" placeholder="Ako si sa o nás odzvedel" id="mf-ref">-->
                         {{ form.ref }}
                         {{ form.ref.errors }}
@@ -61,7 +57,7 @@
                         {{ form.skola.errors }}
                     </div>
                     <div class="form-line half">
-                        <span class="little">Stupeň štúdia v máji 2017</span>
+                        <span class="little">Stupeň štúdia v máji {{ settings.registration_year }}</span>
                         {{ form.stupen_studia }}
                         {{ form.stupen_studia.errors }}
                     </div>
@@ -80,16 +76,20 @@
                     <label for="mf-subscribe"><i class="fa fa-check"></i></label>-->
                     {{ form.novinky }}
                     <label for="id_novinky">
-                        <span>Súhlas so zasielaním informačných materialov</span>
+                        <span>Súhlas so zasielaním informačných materiálov</span>
                     </label>
                     {{ form.novinky.errors }}
                 </div>
                 <div class="form-line">
-				    <input type="submit" class="button yellow" name="mf-submit" value="Pokračovať v registrácií">
-                    <ul id="id_udaje_error" class="errorlist hidden"><li>Ak chcete pokračovať v registrácií, musíte súhlasiť so spracovaním osobných údajov.</li></ul>
+				    <input type="submit" class="button yellow" name="mf-submit" value="Pokračovať v registrácii">
+                    <ul id="id_udaje_error" class="errorlist hidden"><li>Ak chcete pokračovať v registrácii, musíte súhlasiť so spracovaním osobných údajov.</li></ul>
+                </div>
+
+                <div class="form-line deadline">
+                    Prvé výberové kolo končí <time datetime="2018-01-28">28. 1. 2018</time>.
                 </div>
                 <div class="form-line">
-                    V druhom kroku registrácie nám pošli svoje CV a motivačný list. V prípade, že dokumenty nemáš možnosť priložiť, budeme ťa do 2 dní kontaktovať emailom.
+                    V druhom kroku registrácie nám odpovedaj na otázky o tvojej motivácii a pošli svoje <a href="http://tiny.cc/nexteria-cv-manual" target="_blank">aktuálne CV</a>. V prípade, že túto časť nevyplníš hneď, budeme ťa do 2 dní kontaktovať emailom.
                 </div>
             </form>
 
@@ -98,7 +98,7 @@
     <section class="subpage-form-3">
     	<div class="wrapper">
         	<h2 class="underlined center">V krátkosti o výberovom procese</h2>
-            <p class="perex">Výberový proces je stupňovitý, to znamená, že po každom kole sa dozvieš, či postupuješ ďalej alebo nie.<br> Prvé výberové kolá začínajú v januári 2017. Prihlášky registrujeme počas celého roka.</p>
+            <p class="perex">Výberový proces je stupňovitý, to znamená, že po každom kole sa dozvieš, či postupuješ ďalej alebo nie.<br> Prvé výberové kolá začínajú v januári {{ settings.registration_year }}. Prihlášky registrujeme počas celého roka.</p>
             <div class="timeline">
             	<div class="start">
                 	<p class="big">1.</p>
@@ -108,7 +108,7 @@
                 <div class="line one">
                 	<div class="point">
                     	<p class="little">1. kolo</p>
-                        <p>Vyhodnotenie prihlášky,<br>CV a motivačného listu</p>
+                        <p>Vyhodnotenie prihlášky,<br>CV a tvojej motivácie</p>
                     </div>
                 </div>
                 <div class="line two">
