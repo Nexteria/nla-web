@@ -53,44 +53,15 @@ class RegistraciaDruhyKrokForm(ModelForm):
                 raise ValidationError("CV súbor je príliš veľký ( > 2.5 MB )")
         return cv
 
-    def clean_list(self):
-        list = self.cleaned_data.get('list', False)
-        if list:
-            if list._size > 2.5 * 1024 * 1024:
-                raise ValidationError("Súbor s listom je príliš veľký ( > 2.5 MB )")
-        return list
-
     class Meta:
         model = Registracia
 
         cv = forms.FileField(label='CV')
-        fields = ['cv', 'list']
+        fields = ['cv', 'uspech', 'smerovanie', 'okolie', 'ocakavanie']
 
         widgets = {
-            'list': forms.FileInput(),
+            'uspech': forms.Textarea(attrs={'placeholder': 'Buď prosím konkrétny/a a pomenuj pokojne 2-3 situácie.'}),
+            'smerovanie': forms.Textarea(attrs={'placeholder': 'Zaujíma nás, na ktorej téme/témach Ti záleží a ako konkrétne chceš prispieť (alebo už prispievaš) k pozitívnej zmene svojho okolia.'}),
+            'okolie': forms.Textarea(attrs={'placeholder': 'Napíš nám, v akej oblasti alebo oblastiach sa chceš po/popri škole uplatniť. Vlastné podnikanie, zamestnanie, neziskovka, verejný sektor? Alebo čokoľvek iné.'}),
+            'ocakavanie': forms.Textarea(attrs={'placeholder': 'Ako Ti vieme pomôcť, v čom sa chceš rozvíjať a ako by si to, čo u nás získaš, vedel/a využiť vo svojom živote a v prospech svojho okolia.'}),
         }
-        error_messages = {
-            'cv': {
-                'required': ('Položka CV je povinná.')
-            },
-            'list': {
-                'required': ('Položka s motivačným listom je povinná.')
-            },
-        }
-
-# class RegistrationForm(forms.Form):
-#     meno = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'placeholder': 'Meno'}))
-#     priezvisko = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'placeholder': 'Priezvisko'}))
-#     email = forms.EmailField(max_length=100, widget=forms.EmailInput(attrs={'placeholder': 'E-mail'}))
-#     telefon = forms.CharField(max_length=15, widget=forms.TextInput(attrs={'placeholder': 'Telefón'}))
-#     uspech = forms.CharField(widget=forms.Textarea(attrs={'placeholder':
-#               'Čo je tvoj doterajší najväčší úspech, na ktorý si hrdý, a ktorý ťa odlišuje od ostatných? Aký je tvoj najväčší životný úspech?'}))
-#
-#     cv = forms.FileInput(widget = forms.File)
-#     list = forms.FileInput()
-#
-#     ref = forms.CharField(required=False, widget=forms.TextInput(attrs={'placeholder': 'Ako si sa o nás dozvedel'}))
-#     skola = forms.CharField(required=False, widget=forms.TextInput(attrs={'placeholder': 'Názov školy'}))
-#
-#     udaje = forms.BooleanField(required= True)
-#     novinky = forms.BooleanField(required=False)

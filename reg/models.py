@@ -1,21 +1,27 @@
 # -*- coding: utf-8 -*-
 import uuid
 from django.db import models
-from django.core.exceptions import ValidationError
 from django.utils.encoding import python_2_unicode_compatible
 # Create your models here.
+
 
 @python_2_unicode_compatible
 class Registracia(models.Model):
     meno = models.CharField(max_length=100 )
     priezvisko = models.CharField(max_length=100)
     email = models.EmailField(max_length=100)
-    telefon = models.CharField(max_length=15 )
-    uspech = models.TextField()
+    telefon = models.CharField(max_length=15)
+
+    uspech = models.TextField(default='', blank=True)
+    smerovanie = models.TextField(default='', blank=True)
+    okolie = models.TextField(default='', blank=True)
+    ocakavanie = models.TextField(default='', blank=True)
+
+    list = models.FileField(null=True, upload_to='uploads/list/')
+
     token = models.UUIDField(default=uuid.uuid4, editable=False)
 
-    cv = models.FileField(upload_to='uploads/cv/')
-    list = models.FileField(upload_to='uploads/list/')
+    cv = models.FileField(upload_to='uploads/cv/', blank=True)
 
     ref = models.CharField(max_length=500, blank=True, null=True)
     skola = models.CharField(max_length=500, blank=True, null=True)

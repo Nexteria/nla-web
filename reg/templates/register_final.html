@@ -16,13 +16,29 @@
 	<section class="subpage-form-1">
     	<div class="wrapper">
         	<h1 class="underlined center">Dokončenie registrácie</h1>
-            <p class="">Pre dokončenie registrácie potrebujeme tvoje CV a Motivačný list. Môžeš ich nahrať priamo tu, alebo zaslať neskôr na mail {{ registration_email }}.</p>
+            <p class="">Pre dokončenie registrácie potrebujeme tvoje CV a odpovede na nasledujúce otázky. Môžeš ich nahrať priamo tu, alebo zaslať neskôr na mail {{ registration_email }}.</p>
             <p class="">V prípade, že sa ti nepodarí registráciu dokončiť dnes, budeme ťa kontaktovať mailom v priebehu nasledujúcich dvoch dní.</p>
 
         	<form class="main-form" name="main-form" method="post" action="/register/{{ form.instance.token }}/final" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form.non_field_errors }}
 
+                <div class="form-line">
+                    <strong>Kedy sa Ti podarilo prebrať iniciatívu a dosiahnuť úspech/výsledok, na ktorý si hrdý/á?</strong>
+                    {{ form.uspech }}
+                </div>
+                <div class="form-line">
+                    <strong>Kam smeruješ v najbližších rokoch?</strong>
+                    {{ form.smerovanie }}
+                </div>
+                <div class="form-line">
+                    <strong>Ako chceš meniť svoje okolie k lepšiemu?</strong>
+                    {{ form.okolie }}
+                </div>
+                <div class="form-line">
+                    <strong>Čo očakávaš od Nexteria Leadership Academy a ako to využiješ?</strong>
+                    {{ form.ocakavanie }}
+                </div>
             	<div class="row">
                     <input type="hidden" name="token" value="{{ form.instance.token }}" />
                     <div class="form-line half pull-left" id="cv">
@@ -33,17 +49,6 @@
                     </div>
                     <div class="form-line half extra pull-right">
                         <p>Vzor dobrého CV od šéfa slovenského Googlu, Rasťa Kulicha, nájdeš <a href="https://docs.google.com/presentation/d/1qs_GAM6UGr_HeEQPdF06Xf2RCqZTexvG0n_aWUD73eg/edit?usp=sharing" target="_blank">tu.</a></p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="form-line half pull-left" id="list">
-                        <!--<input type="file" name="mf-cl" id="mf-cl" accept="application/pdf, image/*" required>
-                        <label for="mf-cl">Nahraj svoj motivační list<i class="fa fa-check"></i></label>-->
-                        {{ form.list }}
-                        {{ form.list.errors }}
-                    </div>
-                    <div class="form-line half extra pull-right">
-                        <p><a href="/motivacny_list" target="_blank">Návod ako napísať motivačný list nájdeš tu</a></p>
                     </div>
                 </div>
                 <div class="form-line">

@@ -23,9 +23,11 @@ def export_student_list(modeladmin, request, queryset):
         smart_str(u"Skola"),
         smart_str(u"Sales kanal"),
         smart_str(u"Uspech"),
+        smart_str(u"Smerovanie"),
+        smart_str(u"Okolie"),
+        smart_str(u"Ocakavanie"),
         smart_str(u"Datum reg"),
         smart_str(u"CV"),
-        smart_str(u"ML"),
     ])
 
     for obj in queryset:
@@ -37,9 +39,11 @@ def export_student_list(modeladmin, request, queryset):
             smart_str(obj.skola),
             smart_str(obj.ref),
             smart_str(obj.uspech),
+            smart_str(obj.smerovanie),
+            smart_str(obj.okolie),
+            smart_str(obj.ocakavanie),
             smart_str(obj.created_at),
-            smart_str('http://nla.nexteria.sk/media/' + str(obj.cv)),
-            smart_str('http://nla.nexteria.sk/media/' + str(obj.list)),
+            smart_str(('http://nla.nexteria.sk/media/' + str(obj.cv)) if str(obj.cv) else ''),
         ])
     return response
 

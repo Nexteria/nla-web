@@ -53,7 +53,6 @@ class RegisterFinalView(View):
         form = RegistraciaDruhyKrokForm(instance=registracia)
         return render(req, "register_final.html", {'form': form})
 
-
     def post(self, req, uuid):
         try:
             registracia = Registracia.objects.get(token=req.POST.get("token", "x"))
@@ -63,11 +62,11 @@ class RegisterFinalView(View):
         form = RegistraciaDruhyKrokForm(req.POST, req.FILES, instance=registracia)
         if form.is_valid():
             form.save()
-            client = Infinario(settings.EXPONEA_TOKEN, target=settings.EXPONEA_TARGET)
-            client.identify(registracia.email)
-            client.track('registration_documets_uploaded')
+            if settings.EXPONEA_TRACK_REGISTRATION:
+                client = Infinario(settings.EXPONEA_TOKEN, target=settings.EXPONEA_TARGET)
+                client.identify(registracia.email)
+                client.track('registration_documets_uploaded')
             return HttpResponseRedirect(reverse('hotovo'))
-
         return render(req, "register_final.html", {'form':form})
 
 
