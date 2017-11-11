@@ -1,8 +1,20 @@
 # -*- coding: utf-8 -*-
 import uuid
+
+from django.core.exceptions import ValidationError
 from django.db import models
 from django.utils.encoding import python_2_unicode_compatible
 # Create your models here.
+
+
+def max_words(words=400):
+    def validator(value):
+        wslen = len(value.split())
+        if wslen > words:
+            raise ValidationError('Presiahnutý limit slov: %(current_words)s/%(max_words)s',
+                                  params={'current_words': wslen, 'max_words': words},
+                                  code='max_words')
+    return validator
 
 
 @python_2_unicode_compatible
@@ -12,10 +24,13 @@ class Registracia(models.Model):
     email = models.EmailField(max_length=100)
     telefon = models.CharField(max_length=15)
 
-    uspech = models.TextField(default='', blank=True)
-    smerovanie = models.TextField(default='', blank=True)
-    okolie = models.TextField(default='', blank=True)
-    ocakavanie = models.TextField(default='', blank=True)
+    QUESTION_SOFT_LIMIT_WORDS = 200
+    QUESTION_HARD_LIMIT_WORDS = 400
+
+    uspech = models.TextField(default='', blank=True, validators=[max_words(QUESTION_HARD_LIMIT_WORDS)])
+    smerovanie = models.TextField(default='', blank=True, validators=[max_words(QUESTION_HARD_LIMIT_WORDS)])
+    okolie = models.TextField(default='', blank=True, validators=[max_words(QUESTION_HARD_LIMIT_WORDS)])
+    ocakavanie = models.TextField(default='', blank=True, validators=[max_words(QUESTION_HARD_LIMIT_WORDS)])
 
     list = models.FileField(null=True, upload_to='uploads/list/')
 

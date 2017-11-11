@@ -19,25 +19,36 @@
             <p class="">Pre dokončenie registrácie potrebujeme tvoje CV a odpovede na nasledujúce otázky. Môžeš ich nahrať priamo tu, alebo zaslať neskôr na mail {{ registration_email }}.</p>
             <p class="">V prípade, že sa ti nepodarí registráciu dokončiť dnes, budeme ťa kontaktovať mailom v priebehu nasledujúcich dvoch dní.</p>
 
-        	<form class="main-form" name="main-form" method="post" action="/register/{{ form.instance.token }}/final" enctype="multipart/form-data">
+            <p class=""><strong>Nasledujúce odpovede skús prosím formulovať čo najstručnejšie, každá by mala mať menej ako 200 slov.</strong></p>
+
+        	<form class="main-form" id="reg_final" name="main-form" method="post" action="/register/{{ form.instance.token }}/final" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form.non_field_errors }}
 
                 <div class="form-line">
                     <strong>Kedy sa Ti podarilo prebrať iniciatívu a dosiahnuť úspech/výsledok, na ktorý si hrdý/á?</strong>
                     {{ form.uspech }}
+                    <span class="text-counter"></span>
+                    <span class="warning"></span>
+                    {{ form.uspech.errors }}
                 </div>
                 <div class="form-line">
                     <strong>Kam smeruješ v najbližších rokoch?</strong>
                     {{ form.smerovanie }}
+                    <span class="text-counter"></span>
+                    {{ form.smerovanie.errors }}
                 </div>
                 <div class="form-line">
                     <strong>Ako chceš meniť svoje okolie k lepšiemu?</strong>
                     {{ form.okolie }}
+                    <span class="text-counter"></span>
+                    {{ form.okolie.errors }}
                 </div>
                 <div class="form-line">
                     <strong>Čo očakávaš od Nexteria Leadership Academy a ako to využiješ?</strong>
                     {{ form.ocakavanie }}
+                    <span class="text-counter"></span>
+                    {{ form.ocakavanie.errors }}
                 </div>
             	<div class="row">
                     <input type="hidden" name="token" value="{{ form.instance.token }}" />

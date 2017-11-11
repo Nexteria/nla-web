@@ -1163,6 +1163,19 @@ footer .col a{
 	color: #f00;
 }
 
+.subpage-form-1 .main-form .form-line .warning {
+	color: #ffab03;
+    display: block;
+}
+
+.subpage-form-1 .main-form .form-line .text-counter {
+    font-size: 0.8em;
+	clear: both;
+	margin-top: 3px;
+	display: block;
+	float: left;
+}
+
 .subpage-form-1 .main-form .deadline {
     font-weight: bold;
     font-size: 17px;
