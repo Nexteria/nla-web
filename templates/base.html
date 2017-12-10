@@ -85,10 +85,12 @@ fbq('track', 'PageView');
 	<div class="wrapper">
     	<div class="content">
         	<div class="col left">
+                <img class="person-img" src="{% static 'images/foto_betka.jpg' %}" alt="{{ settings.registration_name }}"/>
                 <h3 class="underlined">Máš otázky?</h3>
                 <p>Skús <a href="http://nexteria.sk/som-student/ing/faq/" target="_blank" >FAQ</a> alebo nám napíš.</p>
                 <p>{{ settings.registration_name }} ti rada pomôže</p>
                 <p><a href="mailto:{{ settings.registration_email }}">{{ settings.registration_email }}</a></p>
+                <p>Mobil: {{ settings.registration_phone }}</p>
             </div>
             <div class="col right">
             	<p>© 2017 Nexteria, Všetky práva vyhradené</p>

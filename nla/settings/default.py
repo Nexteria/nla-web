@@ -29,6 +29,7 @@ EXPONEA_TRACK_REGISTRATION = False
 
 REGISTRATION_PERSON_EMAIL = "betka@nexteria.sk"
 REGISTRATION_PERSON_NAME = "Betka"
+REGISTRATION_PERSON_PHONE = "+421 948 049 905"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -40,6 +41,7 @@ SETTINGS_IN_VIEWS = {
     'exponea_target': EXPONEA_TARGET,
     'registration_email': REGISTRATION_PERSON_EMAIL,
     'registration_name': REGISTRATION_PERSON_NAME,
+    'registration_phone': REGISTRATION_PERSON_PHONE,
     'registration_year': '2018',
 }
 

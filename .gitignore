@@ -4,4 +4,4 @@ media/uploads/**/*
 .idea/
 .env
 __pycache__/
-static
+/static

@@ -271,11 +271,11 @@ generácie slušných a schopných mladých ľudí.</p>
 </section>
 <section class="section-skolne">
     <div class="wrapper">
-        <h2 class="underlined">Koľko ťa to bude stáť?</h2>
+        <h2 class="underlined">Ty dáš 20%, my zoženieme zvyšných 80%</h2>
         <div class="col right">
-            <p>Príjmy zo študentských platieb pokrývajú 20% nákladov na organizovanie aktivít programu. Zvyšok je platený zo sponzorských darov partnerov, individuálnych podporovateľov a absolventov, ako aj komerčných aktivít Nexterie ako Night of Chances a kariérnych klubov.</p>
-            <p>Po nepokračovaní do druhého semestra z dôvodu nespokojnosti, vrátime plnú výšku platieb za prvý semester.</p>
-            <p>Počas semestra získavajú študenti za svoju aktivitu body.  Ak študent nezíska za semester nad 75% bodov alebo nespĺňa základné požiadavky ako dochádzka na aktivity, či platby načas, výška jeho platby na mesiac sa zmení na sumu vo vyššej kategórii (v tabuľke - Študent na Absolvent; Absolvent na Trhová hodnota).</p>
+            <p>Príjmy zo študentských platieb pokrývajú 20% nákladov na organizovanie aktivít programu. Zvyšok je platený zo sponzorských darov partnerov, individuálnych podporovateľov a absolventov, ako aj komerčných aktivít Nexterie ako Night of Chances a kariérnych klubov. Trhová hodnota všetkých kurzov, diskusii, mentoringového programu, networkingových eventov a možností podieľať sa na praktických projektoch vo firmách sa pohybuje na úrovni 3600€/ročne.</p>
+            <p>Prvý semester ponúkame trial verziu iba za 39€/mesiac. Ak sa z dôvodu nespokojnosti rozhodneš v štúdiu v Nexterii nepokračovať, vrátime plnú výšku platieb za prvý semester.</p>
+            <p>Každý študent má právo požiadať o štipendium a znížiť si tak základnú platbu z 39€/79€ na nižšiu sumu. V školskom roku 2017/2018 plánujeme udeliť štipendium v rôznej forme cca. 80% všetkých študentov.</p>
             <div class="but-line">
                 <a href="{% url 'register' %}" class="button deadline-button">Prihlás sa</a>
             </div>
@@ -286,59 +286,41 @@ generácie slušných a schopných mladých ľudí.</p>
                     <table>
                         <thead>
                             <th>
-                                <div>Platba</div>
-                                <div>za mesiac</div>
+                                <div>Členské</div>
                             </th>
                             <th>
                                 <div>Študent</div>
-                                <div>denného štúdia</div>
-                            </th>
-                            <th>
-                                <div>Absolvent</div>
-                                <div>pracujúci</div>
+                                <div class="subtitle">Nexterie</div>
                             </th>
                             <th>
                                 <div>Trhová</div>
-                                <div>hodnota</div>
+                                <div class="subtitle">cena</div>
                             </th>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>1. semester</td>
-                                <td>39 €</td>
-                                <td>39 €</td>
-                                <td>290 €</td>
+                                <td class="with-ribon">
+                                    <span>1. Semester</span>
+                                    <div class="corner-ribbon bottom-right red shadow">TRIAL</div>
+                                </td>
+                                <td>39 €&nbsp;</td>
+                                <td>360 €</td>
                             </tr>
                             <tr>
-                                <td>2. semester</td>
-                                <td>39 €</td>
-                                <td>59 €</td>
-                                <td>290 €</td>
+                                <td>2. Semester</td>
+                                <td>79 €*</td>
+                                <td>360 €</td>
                             </tr>
                             <tr>
-                                <td>2. ročník</td>
-                                <td>49 €</td>
-                                <td>69 €</td>
-                                <td>290 €</td>
-                            </tr>
-                            <tr>
-                                <td>3. ročník</td>
-                                <td>59 €</td>
-                                <td>79 €</td>
-                                <td>290 €</td>
+                                <td>2. a 3. Ročník</td>
+                                <td>79 €*</td>
+                                <td>360 €</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
                 <div class="pod-skolnym">
-                    <div><b>Každý študent má možnosť na individuálne zníženie výšky platby, ak spĺňa tieto podmienky:</b></div>
-                    <ul>
-                        <li>Denný študent s príjmom do 300 € v čistom</li>
-                        <li>Neštudent s príjmom do 600 € v čistom</li>
-                        <li>Študent alebo neštudent v ťažkej sociálnej situácií</li>
-                        <li>Zníženie výšky platieb poskytujeme individuálne na základe možností a potrieb študentov NLA.</li>
-                        <li><a href="{% static 'stipendium_v_nla.pdf' %}" target="_blank">Viac informácií nájdeš tu</a></li>
-                    </ul>
+                    <div>* Každý študent má možnosť na individuálne zníženie výšky platby. Štipendium vieme poskytnúť až 80% študentov. Nedostatočné finančné zdroje by nemali byť prekážkou v podaní prihlášky. Pre viac info <a href="{% static 'Stipendia_info.pdf' %}" target="_blank"> klikni TU</a>.</div>
                 </div>
             </div>
         </div>
