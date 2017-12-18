@@ -28,19 +28,19 @@ class RegistraciaForm(ModelForm):
         }
         error_messages = {
             'meno': {
-                'required': ('Položka meno je povinná.')
+                'required': 'Položka meno je povinná.'
             },
             'priezvisko': {
-                'required': ('Položka prievisko je povinná.')
+                'required': 'Položka prievisko je povinná.'
             },
             'email': {
-                'required': ('Položka email je povinná.')
+                'required': 'Položka email je povinná.'
             },
             'telefon': {
-                'required': ('Položka telefónne číslo je povinná.')
+                'required': 'Položka telefónne číslo je povinná.'
             },
             'stupen_studia': {
-                'required': ('Položka stupeň štúdia je povinná.')
+                'required': 'Položka stupeň štúdia je povinná.'
             },
         }
 
@@ -60,8 +60,37 @@ class RegistraciaDruhyKrokForm(ModelForm):
         fields = ['cv', 'uspech', 'smerovanie', 'okolie', 'ocakavanie']
 
         widgets = {
-            'uspech': forms.Textarea(attrs={'placeholder': 'Buď prosím konkrétny/a a pomenuj pokojne 2-3 situácie.'}),
-            'smerovanie': forms.Textarea(attrs={'placeholder': 'Zaujíma nás, na ktorej téme/témach Ti záleží a ako konkrétne chceš prispieť (alebo už prispievaš) k pozitívnej zmene svojho okolia.'}),
-            'okolie': forms.Textarea(attrs={'placeholder': 'Napíš nám, v akej oblasti alebo oblastiach sa chceš po/popri škole uplatniť. Vlastné podnikanie, zamestnanie, neziskovka, verejný sektor? Alebo čokoľvek iné.'}),
-            'ocakavanie': forms.Textarea(attrs={'placeholder': 'Ako Ti vieme pomôcť, v čom sa chceš rozvíjať a ako by si to, čo u nás získaš, vedel/a využiť vo svojom živote a v prospech svojho okolia.'}),
+            'uspech': forms.Textarea(attrs={
+                'soft_limit': Registracia.QUESTION_SOFT_LIMIT_WORDS,
+                'placeholder':
+                    'Buď prosím konkrétny/a a pomenuj pokojne 2-3 situácie.'}),
+            'smerovanie': forms.Textarea(attrs={
+                'soft_limit': Registracia.QUESTION_SOFT_LIMIT_WORDS,
+                'placeholder':
+                    'Napíš nám, v akej oblasti alebo oblastiach sa chceš po/popri škole uplatniť. '
+                    'Vlastné podnikanie, zamestnanie, neziskovka, verejný sektor? Alebo čokoľvek iné.'}),
+            'okolie': forms.Textarea(attrs={
+                'soft_limit': Registracia.QUESTION_SOFT_LIMIT_WORDS,
+                'placeholder':
+                    'Zaujíma nás, na ktorej téme/témach Ti záleží a ako konkrétne chceš prispieť '
+                    '(alebo už prispievaš) k pozitívnej zmene svojho okolia.'}),
+            'ocakavanie': forms.Textarea(attrs={
+                'soft_limit': Registracia.QUESTION_SOFT_LIMIT_WORDS,
+                'placeholder':
+                    'Ako Ti vieme pomôcť, v čom sa chceš rozvíjať a ako by si to, čo u nás získaš, '
+                    'vedel/a využiť vo svojom živote a v prospech svojho okolia.'}),
+        }
+        error_messages = {
+            'uspech': {
+                'max_words': 'Pokús sa prosím svoju myšlienku vyjadriť trochu stručnejšie.'
+            },
+            'smerovanie': {
+                'max_words': 'Pokús sa prosím svoju myšlienku vyjadriť trochu stručnejšie.'
+            },
+            'okolie': {
+                'max_words': 'Pokús sa prosím svoju myšlienku vyjadriť trochu stručnejšie.'
+            },
+            'ocakavanie': {
+                'max_words': 'Pokús sa prosím svoju myšlienku vyjadriť trochu stručnejšie.'
+            },
         }

@@ -21,13 +21,13 @@
 
 <script type="text/javascript">!function(i,t){function e(e){return function(){var n=arguments;if("initialize"==e&&n&&n[0].modify&&n[0].modify.overlay&&"loading"==t.readyState){var a="__inf__overlay__";t.write('<div id="'+a+'" style="position:absolute;background:#fff;left:0;top:0;width:100%;height:100%;z-index:1000000"></div>'),setTimeout(function(){var e=t.getElementById(a);e&&t.body.removeChild(e),i.infinario.__=!0},n[0].modify.delay||500)}this._.push([e,arguments])}}if(!i.infinario){var n,a,o="initialize identify update track trackLink trackEnhancedEcommerce getHtml showHtml showForm ping getAbTest".split(" "),r=t.createElement("script"),d="https:"===t.location.protocol?"https:":"http:";for(i.infinario={_:[]},a=0;a<o.length;a++)n=o[a],i.infinario[n]=e(n);r.type="text/javascript",r.async=!0,r.src=d+"//api.exponea.com/js/infinario-1.7.min.js",t.getElementsByTagName("head")[0].appendChild(r)}}(window,document);</script>
 <script type="text/javascript">
-    infinario.initialize({ 
+    infinario.initialize({
         target: "{{ settings.exponea_target }}",
         token: "{{ settings.exponea_token }}",
         track: { visits: true },
         modify: {
-            enabled: true, 
-            overlay: false, 
+            enabled: true,
+            overlay: false,
             delay: 500
         }
     });
@@ -39,9 +39,9 @@
 {% bootstrap_javascript %}
 
 <script src="{% static 'js/filestyle.min.js' %}"></script>
-<script src="{% static 'js/custom.js' %}?v=0.26"></script>
+<script src="{% static 'js/custom.js' %}?v=0.29"></script>
 
-<link rel="stylesheet" href="{% static 'css/style.css' %}?v=0.26">
+<link rel="stylesheet" href="{% static 'css/style.css' %}?v=0.29">
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 
@@ -55,7 +55,7 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window,document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
- fbq('init', '1839630742923861'); 
+ fbq('init', '1839630742923861');
 fbq('track', 'PageView');
 </script>
 <!-- End Facebook Pixel Code -->
@@ -102,7 +102,7 @@ fbq('track', 'PageView');
 {% endblock %}
 
 <noscript>
- <img height="1" width="1" 
+ <img height="1" width="1"
 src="https://www.facebook.com/tr?id=1839630742923861&ev=PageView
 &noscript=1"/>
 </noscript>

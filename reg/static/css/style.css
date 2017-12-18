@@ -944,17 +944,15 @@ header .right .fb:hover{
 .section-8 .col.left{
 	
 }
-.section-8 .col.left ul.pozadavky{
+.section-8 .col.left .pozadavky{
 	margin-bottom:50px;
 	max-width:500px;
 }
-.section-8 .col.left ul.pozadavky li{
-	
-}
-.section-8 .col.left ul.pozadavky li span.num{
+
+.section-8 .col.left .pozadavky td span.num{
 	font-family: 'geomanistbold';
 	font-size:32px;
-	display:inline-block;
+	display:inline;
 	border:4px solid #3d3d3d;
 	box-sizing:border-box;
 	padding-top:2px;
@@ -966,28 +964,30 @@ header .right .fb:hover{
 	-webkit-border-radius:50%;
 	border-radius:50%;
 }
-.section-8 .col.left ul.pozadavky li p{
-	display:inline-block;
+.section-8 .col.left .pozadavky td p{
+	display:inline;
 	float:left;
-	margin:0;
+	/*margin: 0;*/
 	font-size:19px;
 	max-width:320px;
-	margin-left:15px;
-	margin-top:0;
+	margin-left: 15px;
+	margin-top: 0;
 }
-.section-8 .col.left ul.pozadavky li p span.little{
+.section-8 .col.left .pozadavky td p span.little{
 	font-size:16px;
 }
-.section-8 .col.left ul.pozadavky li p a{
+.section-8 .col.left .pozadavky td p a{
 	color:#3d3d3d;
 	text-decoration:underline;
 }
-.section-8 .col.left ul.pozadavky li:first-child p{
-	margin-top:15px;
+.section-8 .col.left .pozadavky td:first-child {
+   vertical-align: top;
 }
-.section-8 .col.left ul.pozadavky li:nth-child(2) p{
-	margin-top:4px;
+
+.section-8 .col.left .pozadavky td:nth-child(2) {
+	vertical-align: middle;
 }
+
 @media screen and (max-width:1040px){
 	.section-8 .col{
 		width:100%;
@@ -1176,6 +1176,19 @@ footer .col a{
 
 .subpage-form-1 .main-form .form-line ul.errorlist {
 	color: #f00;
+}
+
+.subpage-form-1 .main-form .form-line .warning {
+	color: #ffab03;
+    display: block;
+}
+
+.subpage-form-1 .main-form .form-line .text-counter {
+    font-size: 0.8em;
+	clear: both;
+	margin-top: 3px;
+	display: block;
+	float: left;
 }
 
 .subpage-form-1 .main-form .deadline {
