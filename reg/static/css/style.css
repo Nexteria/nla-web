@@ -360,10 +360,11 @@ header .right .fb:hover{
 	position:relative;
 	margin-top: 2em;
 	font-family: 'latomedium_italic';
-	font-size:16px;
+	font-size:20px;
 	box-sizing:border-box;
 	padding:10px 30px;
 	text-align:justify;
+	font-weight: bold;
 }
 .section-1 .right .animals-img div .citace:before, .section-1 .right .animals-img div .citace:after{
 	position:absolute;
@@ -712,7 +713,7 @@ header .right .fb:hover{
 	width: 100%;
 	max-width: 32em;
 	padding: 1em;
-	background: #3d3d3d;
+	background: #f00;
 	color: #fff;
 	font-size: 0.9em;
 }

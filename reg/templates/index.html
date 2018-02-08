@@ -3,14 +3,14 @@
 
 {% block content %}
 <section class="section-1">
-	<div class="wrapper">
-    	<div class="left left-column">
-    		<h1 class="underlined yellow">Nexteria leadership academy</h1>
-            <p class="perex">3-ročný intenzívny vzdelávací program popri vysokej škole</p>
-            <p>Nexteria Leadership Academy je 3-ročný rozvojový program. Intenzívne rozvíjame praktické zručnosti, silné vzťahy a etické hodnoty v úzkej rôznorodej skupine top študentov, ktorí majú ambíciu a potenciál byť lídrami v biznise, politike a iných dôležitých oblastiach spoločnosti.</p>
+    <div class="wrapper">
+        <div class="left left-column">
+            <h1 class="underlined yellow">Nexteria leadership academy</h1>
+            <p class="perex">3-ročný intenzívny vzdelávací program primárne popri vysokej škole</p>
+            <p>Nexteria Leadership Academy je 3-ročný rozvojový program. Intenzívne rozvíjame praktické zručnosti, silné vzťahy a etické hodnoty v úzkej rôznorodej skupine top študentov, ktorí majú ambíciu a potenciál byť lídrami v biznise, politike, vede, práve, IT a ďalších dôležitých oblastiach spoločnosti.</p>
         </div>
         <div class="right right-column">
-        	<div class="animals-img">
+            <div class="animals-img">
                 <div id="carousel-student-generic" class="carousel slide" data-ride="carousel">
                   <!-- Indicators -->
                   <ol class="carousel-indicators">
@@ -83,15 +83,15 @@ generácie slušných a schopných mladých ľudí.</p>
                           <img src="{% static 'images/graphic/carousel-nx-people-1.jpg' %}" alt="">
                           <div class="carousel-caption">
                             <h3>ANDREJ KISKA</h3>
-                            <p>PREZIDENT SLOVENSKEJ REPUBLIKY</p>
+                            <p>ZAKLADATEĽ DOBRÉHO ANJELA</p>
                           </div>
                         </div>
                         <div class="item">
-                          <img src="{% static 'images/graphic/carousel-nx-people-2.jpg' %}" alt="">
-                          <div class="carousel-caption">
-                            <h3>STANISLAV BOLEDOVIČ</h3>
-                            <p>SPOLUZAKLADATEĽ NEXTERIE A ZAKLADATEĽ A CEO TEACH FOR SLOVAKIA</p>
-                          </div>
+                            <img src="{% static 'images/graphic/carousel-nx-people-4.jpg' %}" alt="">
+                            <div class="carousel-caption">
+                              <h3>KATARÍNA BOLEDOVIČOVÁ</h3>
+                              <p>RIADITEĽKA ODBORU RIADENIA PREDAJA A SERVISU TATRA BANKA</p>
+                            </div>
                         </div>
                         <div class="item">
                           <img src="{% static 'images/graphic/carousel-nx-people-3.jpg' %}" alt="">
@@ -101,19 +101,12 @@ generácie slušných a schopných mladých ľudí.</p>
                           </div>
                         </div>
                         <div class="item">
-                          <img src="{% static 'images/graphic/carousel-nx-people-4.jpg' %}" alt="">
-                          <div class="carousel-caption">
-                            <h3>KATARÍNA BOLEDOVIČOVÁ</h3>
-                            <p>RIADITEĽKA ODBORU RIADENIA PREDAJA A SERVISU TATRA BANKA</p>
+                            <img src="{% static 'images/graphic/carousel-nx-people-7.jpg' %}" alt="">
+                            <div class="carousel-caption">
+                              <h3>TATIANA ONDREJKOVÁ</h3>
+                              <p>CEO PELIKAN.SK</p>
+                            </div>
                           </div>
-                        </div>
-                        <div class="item">
-                          <img src="{% static 'images/graphic/carousel-nx-people-5.jpg' %}" alt="">
-                          <div class="carousel-caption">
-                            <h3>ALENA KANABOVÁ</h3>
-                            <p>SENIOR MANAGER ACCENTURE</p>
-                          </div>
-                        </div>
                         <div class="item">
                           <img src="{% static 'images/graphic/carousel-nx-people-6.jpg' %}" alt="">
                           <div class="carousel-caption">
@@ -122,28 +115,80 @@ generácie slušných a schopných mladých ľudí.</p>
                           </div>
                         </div>
                         <div class="item">
-                          <img src="{% static 'images/graphic/carousel-nx-people-7.jpg' %}" alt="">
-                          <div class="carousel-caption">
-                            <h3>TATIANA ONDREJKOVÁ</h3>
-                            <p>CEO PELIKAN.SK</p>
-                          </div>
+                            <img src="{% static 'images/graphic/carousel-nx-people-5.jpg' %}" alt="">
+                            <div class="carousel-caption">
+                              <h3>ALENA KANABOVÁ</h3>
+                              <p>SENIOR MANAGER ACCENTURE</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="{% static 'images/graphic/carousel-nx-people-2.jpg' %}" alt="">
+                            <div class="carousel-caption">
+                              <h3>STANISLAV BOLEDOVIČ</h3>
+                              <p>SPOLUZAKLADATEĽ NEXTERIE A ZAKLADATEĽ A CEO TEACH FOR SLOVAKIA</p>
+                            </div>
                         </div>
                       </div>
                     </div>
                     <br class="cleaner">
                     <p>Prepájame študentov a úspešných ľudí s vysokými morálnymi hodnotami. Podporujeme tak transfer vedomostí a schopností medzi našimi podporovateľmi a študentmi formou diskusií, workshopov, kurzov, ako aj mentoringu.</p>
-                    <a href="{% url 'register' %}" class="button yellow">Spoznaj úspešných</a>
+                    <a href="{% url 'register' %}" class="button yellow">Prihlás sa</a>
                 </div>
             </div>
-        	<div class="col left">
-            	<ul class="osobnosti">
-                	<li>
-                    	<div class="os-logo">
-                        	<img src="{% static 'images/graphic/os-kiska.png' %}" alt="">
+            <div class="col left">
+                <ul class="osobnosti">
+                    <li>
+                        <div class="os-logo">
+                            <img src="{% static 'images/graphic/os-kiska.png' %}" alt="">
                         </div>
                         <div class="os-jmeno">
-                        	<p class="jmeno">Andrej Kiska</p>
-                            <p class="funkce">Prezident Slovenskej republiky</p>
+                            <p class="jmeno">Andrej Kiska</p>
+                            <p class="funkce">Zakladateľ Dobrého Anjela</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="os-logo">
+                            <img src="{% static 'images/graphic/os-boledovicova.png' %}" alt="">
+                        </div>
+                        <div class="os-jmeno">
+                            <p class="jmeno">Katarína Boledovičová</p>
+                            <p class="funkce">Riaditeľka odboru riadenia predaja a servisu Tatra Banka</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="os-logo">
+                            <img src="{% static 'images/graphic/os-mesko.png' %}" alt="">
+                        </div>
+                        <div class="os-jmeno">
+                            <p class="jmeno">Michal Meško</p>
+                            <p class="funkce">CEO Martinus.sk</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="os-logo">
+                            <img src="{% static 'images/graphic/os-pelikan.png' %}" alt="">
+                        </div>
+                        <div class="os-jmeno">
+                            <p class="jmeno">Tatiana Ondrejková</p>
+                            <p class="funkce">CEO pelikan.sk</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="os-logo">
+                            <img src="{% static 'images/graphic/os-kolnik.png' %}" alt="">
+                        </div>
+                        <div class="os-jmeno">
+                            <p class="jmeno">Marián Kolník</p>
+                            <p class="funkce">Client partner Franklincovey</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="os-logo">
+                            <img src="{% static 'images/graphic/os-kanabova.png' %}" alt="">
+                        </div>
+                        <div class="os-jmeno">
+                            <p class="jmeno">Alena Kanabová</p>
+                            <p class="funkce">Senior manager Accenture</p>
                         </div>
                     </li>
                     <li>
@@ -153,51 +198,6 @@ generácie slušných a schopných mladých ľudí.</p>
                         <div class="os-jmeno">
                             <p class="jmeno">Stanislav Boledovič</p>
                             <p class="funkce">Spoluzakladateľ Nexterie a zakladateľ a CEO Teach for Slovakia</p>
-                        </div>
-                    </li>
-                    <li>
-                    	<div class="os-logo">
-                        	<img src="{% static 'images/graphic/os-mesko.png' %}" alt="">
-                        </div>
-                        <div class="os-jmeno">
-                        	<p class="jmeno">Michal Meško</p>
-                            <p class="funkce">CEO Martinus.sk</p>
-                        </div>
-                    </li>
-                    <li>
-                    	<div class="os-logo">
-                        	<img src="{% static 'images/graphic/os-boledovicova.png' %}" alt="">
-                        </div>
-                        <div class="os-jmeno">
-                        	<p class="jmeno">Katarína Boledovičová</p>
-                            <p class="funkce">Riaditeľka odboru riadenia predaja a servisu Tatra Banka</p>
-                        </div>
-                    </li>
-                    <li>
-                    	<div class="os-logo">
-                        	<img src="{% static 'images/graphic/os-kanabova.png' %}" alt="">
-                        </div>
-                        <div class="os-jmeno">
-                        	<p class="jmeno">Alena Kanabová</p>
-                            <p class="funkce">Senior manager Accenture</p>
-                        </div>
-                    </li>
-                    <li>
-                    	<div class="os-logo">
-                        	<img src="{% static 'images/graphic/os-kolnik.png' %}" alt="">
-                        </div>
-                        <div class="os-jmeno">
-                        	<p class="jmeno">Marián Kolník</p>
-                            <p class="funkce">Client partner Franklincovey</p>
-                        </div>
-                    </li>
-                    <li>
-                    	<div class="os-logo">
-                        	<img src="{% static 'images/graphic/os-pelikan.png' %}" alt="">
-                        </div>
-                        <div class="os-jmeno">
-                        	<p class="jmeno">Tatiana Ondrejková</p>
-                            <p class="funkce">CEO pelikan.sk</p>
                         </div>
                     </li>
                 </ul>
@@ -244,24 +244,22 @@ generácie slušných a schopných mladých ľudí.</p>
                     </div>
                     <div class="text">
                         <h3>Networking</h3>
-                        <p>Na pravidelných akciách, ale aj mimo nich, sa môžu naši študenti zoznamovať a komunikovať s viac ako 150 významnými podporovateľmi a partnermi, 80 absolventami NLA a množstvom iných zaujímavých ľudí.</p>
+                        <p>Na pravidelných akciách, ale aj mimo nich, sa môžu naši študenti zoznamovať a komunikovať s viac ako 200 významnými podporovateľmi a partnermi, 100 absolventmi NLA a množstvom iných zaujímavých ľudí.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="aktiv-img">
+                        <img src="{% static 'images/graphic/ak-prax.png' %}" alt="Intenzívne kurzy">
+                    </div>
+                    <div class="text">
+                        <h3>Projekty v praxi</h3>
+                        <p>Vytvárame priestor na zapojenie študentov NLA do reálnych projektov vo firmách, spoluorganizovania podujatí pod záštitou Nexterie a podporujeme rozvoj vlastných študentských projektov.</p>
                     </div>
                 </li>
             </ul>
         </div>
         <div class="col right">
             <div id="studentske-aktivity-video"></div>
-            <ul class="aktivity">
-                <li>
-                    <div class="aktiv-img">
-                        <img src="{% static 'images/graphic/ak-prax.png' %}" alt="Intenzívne kurzy">
-                    </div>
-                    <div class="text">
-                        <h3>Projekty z praxe</h3>
-                        <p>Vytvárame priestor na zapojenie študentov NLA do reálnych projektov vo firmách, spoluorganizovania podujatí pod záštitou Nexterie a podporujeme rozvoj vlastných študentských projektov.</p>
-                    </div>
-                </li>
-            </ul>
         </div>
         <div class="clearfix"></div>
         <div class="but-line">
@@ -274,8 +272,8 @@ generácie slušných a schopných mladých ľudí.</p>
         <h2 class="underlined">Ty dáš 20%, my zoženieme zvyšných 80%</h2>
         <div class="col right">
             <p>Príjmy zo študentských platieb pokrývajú 20% nákladov na organizovanie aktivít programu. Zvyšok je platený zo sponzorských darov partnerov, individuálnych podporovateľov a absolventov, ako aj komerčných aktivít Nexterie ako Night of Chances a kariérnych klubov. Trhová hodnota všetkých kurzov, diskusii, mentoringového programu, networkingových eventov a možností podieľať sa na praktických projektoch vo firmách sa pohybuje na úrovni 3600€/ročne.</p>
-            <p>Prvý semester ponúkame trial verziu iba za 39€/mesiac. Ak sa z dôvodu nespokojnosti rozhodneš v štúdiu v Nexterii nepokračovať, vrátime plnú výšku platieb za prvý semester.</p>
-            <p>Každý študent má právo požiadať o štipendium a znížiť si tak základnú platbu z 39€/79€ na nižšiu sumu. V školskom roku 2017/2018 plánujeme udeliť štipendium v rôznej forme cca. 80% všetkých študentov.</p>
+            <p><b>Prvý semester ponúkame trial verziu iba za 39€/mesiac. Ak sa z dôvodu nespokojnosti rozhodneš v štúdiu v Nexterii nepokračovať, vrátime Ti plnú výšku platieb za prvý semester.</b></p>
+            <p>Každý študent má taktiež právo požiadať o štipendium a znížiť si tak základnú platbu z 39€/79€ na nižšiu sumu. V školskom roku 2018/2019 plánujeme udeliť štipendium v rôznej forme cca. 80% všetkých študentov.</p>
             <div class="but-line">
                 <a href="{% url 'register' %}" class="button deadline-button">Prihlás sa</a>
             </div>
@@ -320,7 +318,7 @@ generácie slušných a schopných mladých ľudí.</p>
                     </table>
                 </div>
                 <div class="pod-skolnym">
-                    <div>* Každý študent má možnosť na individuálne zníženie výšky platby. Štipendium vieme poskytnúť až 80% študentov. Nedostatočné finančné zdroje by nemali byť prekážkou v podaní prihlášky. Pre viac info <a href="{% static 'Stipendia_info.pdf' %}" target="_blank"> klikni TU</a>.</div>
+                    <div>* Každý študent má možnosť požiadať o individuálne zníženie výšky platby. Nejakú formu štipendium vieme poskytnúť až 80% študentov. Nedostatočné finančné zdroje by tak určite nemali byť prekážkou v podaní prihlášky. Pre viac informácii o štipendiách si prečítaj <a href="{% static 'Stipendia_info.pdf' %}" target="_blank">TENTO DOKUMENT</a>.</div>
                 </div>
             </div>
         </div>
@@ -357,7 +355,7 @@ generácie slušných a schopných mladých ľudí.</p>
             </li>
         </ul>
         <div class="but-line">
-        	<a href="{% url 'register' %}" class="button deadline-button">Registruj sa</a>
+        	<a href="{% url 'register' %}" class="button deadline-button">Prihlás sa</a>
         </div>
     </div>
 </section>
@@ -436,7 +434,7 @@ generácie slušných a schopných mladých ľudí.</p>
         </div>
         <div class="clearfix"></div>
         <div class="but-line">
-        	<a href="{% url 'register' %}" class="button">Zlepšuj sa!</a>
+        	<a href="{% url 'register' %}" class="button">Prihlás sa</a>
         </div>
     </div>
 </section>
