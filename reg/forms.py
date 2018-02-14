@@ -57,6 +57,8 @@ class RegistraciaDruhyKrokForm(ModelForm):
         if cv:
             if cv._size > 2.5 * 1024 * 1024:
                 raise ValidationError("CV súbor je príliš veľký ( > 2.5 MB )")
+        else:
+            raise ValidationError('Na dokončenie registrácie potrebujeme, aby si priložil svoj životopis.')
         return cv
 
     class Meta:
@@ -88,15 +90,19 @@ class RegistraciaDruhyKrokForm(ModelForm):
         }
         error_messages = {
             'uspech': {
-                'max_words': 'Pokús sa prosím svoju myšlienku vyjadriť trochu stručnejšie.'
+                'max_words': 'Pokús sa prosím svoju myšlienku vyjadriť trochu stručnejšie.',
+                'required': 'Na dokončenie registrácie potrebujeme od Teba odpovede na všetky otázky.',
             },
             'smerovanie': {
-                'max_words': 'Pokús sa prosím svoju myšlienku vyjadriť trochu stručnejšie.'
+                'max_words': 'Pokús sa prosím svoju myšlienku vyjadriť trochu stručnejšie.',
+                'required': 'Na dokončenie registrácie potrebujeme od Teba odpovede na všetky otázky.',
             },
             'okolie': {
-                'max_words': 'Pokús sa prosím svoju myšlienku vyjadriť trochu stručnejšie.'
+                'max_words': 'Pokús sa prosím svoju myšlienku vyjadriť trochu stručnejšie.',
+                'required': 'Na dokončenie registrácie potrebujeme od Teba odpovede na všetky otázky.',
             },
             'ocakavanie': {
-                'max_words': 'Pokús sa prosím svoju myšlienku vyjadriť trochu stručnejšie.'
+                'max_words': 'Pokús sa prosím svoju myšlienku vyjadriť trochu stručnejšie.',
+                'required': 'Na dokončenie registrácie potrebujeme od Teba odpovede na všetky otázky.',
             },
         }

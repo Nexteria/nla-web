@@ -23,40 +23,40 @@
                 {{ form.non_field_errors }}
 
             	<div class="form-line half">
-                	<span class="little">Meno</span>
+                	<span class="little">Meno <span class="mandatory-star">*</span></span>
                     {{ form.meno }}
                     {{ form.meno.errors }}
                 </div>
                 <div class="form-line half">
-                	<span class="little">Priezvisko</span>
+                	<span class="little">Priezvisko <span class="mandatory-star">*</span></span>
                     {{ form.priezvisko }}
                     {{ form.priezvisko.errors }}
                 </div>
                 <div class="form-line half">
-                    <span class="little">Email</span>
+                    <span class="little">Email <span class="mandatory-star">*</span></span>
                 	{{ form.email }}
                     {{ form.email.errors }}
                 </div>
                 <div class="form-line half">
-                    <span class="little">Telefónne číslo</span>
+                    <span class="little">Telefónne číslo <span class="mandatory-star">*</span></span>
                 	{{ form.telefon }}
                     {{ form.telefon.errors }}
                 </div>
                 <div>
                 	<div class="form-line">
-                        <span class="little">Ako si sa o nás dozvedel/a</span>
+                        <span class="little">Ako si sa o nás dozvedel/a <span class="mandatory-star">*</span></span>
                     	<!--<input type="text" name="mf-ref" placeholder="Ako si sa o nás odzvedel" id="mf-ref">-->
                         {{ form.ref }}
                         {{ form.ref.errors }}
                     </div>
                     <div class="form-line half">
-                        <span class="little">Názov aktuálnej školy</span>
+                        <span class="little">Názov aktuálnej školy <span class="mandatory-star">*</span></span>
                         <!--<input type="text" name="mf-school" placeholder="Názov školy" id="mf-school">-->
                         {{ form.skola }}
                         {{ form.skola.errors }}
                     </div>
                     <div class="form-line half">
-                        <span class="little">Stupeň štúdia v máji {{ settings.registration_year }}</span>
+                        <span class="little">Stupeň štúdia v máji {{ settings.registration_year }} <span class="mandatory-star">*</span></span>
                         {{ form.stupen_studia }}
                         {{ form.stupen_studia.errors }}
                     </div>

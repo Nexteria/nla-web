@@ -27,10 +27,10 @@ class Registracia(models.Model):
     QUESTION_SOFT_LIMIT_WORDS = 200
     QUESTION_HARD_LIMIT_WORDS = 400
 
-    uspech = models.TextField(default='', blank=True, validators=[max_words(QUESTION_HARD_LIMIT_WORDS)])
-    smerovanie = models.TextField(default='', blank=True, validators=[max_words(QUESTION_HARD_LIMIT_WORDS)])
-    okolie = models.TextField(default='', blank=True, validators=[max_words(QUESTION_HARD_LIMIT_WORDS)])
-    ocakavanie = models.TextField(default='', blank=True, validators=[max_words(QUESTION_HARD_LIMIT_WORDS)])
+    uspech = models.TextField(validators=[max_words(QUESTION_HARD_LIMIT_WORDS)])
+    smerovanie = models.TextField(validators=[max_words(QUESTION_HARD_LIMIT_WORDS)])
+    okolie = models.TextField(validators=[max_words(QUESTION_HARD_LIMIT_WORDS)])
+    ocakavanie = models.TextField(validators=[max_words(QUESTION_HARD_LIMIT_WORDS)])
 
     list = models.FileField(null=True, upload_to='uploads/list/')
 

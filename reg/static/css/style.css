@@ -1599,7 +1599,11 @@ footer .col a{
 	transform: rotate(-45deg);
 	-webkit-transform: rotate(-45deg);
   }
-  
+
+  .mandatory-star {
+	  color: #e43;
+      font-size: 1.5em;
+  }
   /* Colors */
   
   .corner-ribbon.white{background: #f0f0f0; color: #555;}
