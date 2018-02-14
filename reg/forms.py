@@ -42,6 +42,12 @@ class RegistraciaForm(ModelForm):
             'stupen_studia': {
                 'required': 'Položka stupeň štúdia je povinná.'
             },
+            'ref': {
+                'required': 'Táto položka je povinná.',
+            },
+            'skola': {
+                'required': 'Položka škola je povinná.',
+            },
         }
 
 

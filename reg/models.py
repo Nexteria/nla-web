@@ -38,8 +38,8 @@ class Registracia(models.Model):
 
     cv = models.FileField(upload_to='uploads/cv/', blank=True)
 
-    ref = models.CharField(max_length=500, blank=True, null=True)
-    skola = models.CharField(max_length=500, blank=True, null=True)
+    ref = models.CharField(max_length=500)
+    skola = models.CharField(max_length=500)
 
     STUPNE_STUDIA = (('1', 'Stredná škola',), ('2', 'Maturitný ročník',), ('3', 'Bakalárske štúdium',), ('4', 'Magisterské štúdium',), ('5', 'Absolvent (PhD.)',))
     stupen_studia = models.CharField(max_length=1, choices=STUPNE_STUDIA, null=True)
