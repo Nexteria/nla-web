@@ -19,10 +19,10 @@ from reg import views
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
-    url(r'^register$', views.RegisterView.as_view(), name='register'),
-    url(r'^register/(?P<uuid>[\w]{8}-[\w]{4}-[\w]{4}-[\w]{4}-[\w]{12})/final',
-        views.RegisterFinalView.as_view(),
-        name='registerFinal'),
+    # url(r'^register$', views.RegisterView.as_view(), name='register'),
+    # url(r'^register/(?P<uuid>[\w]{8}-[\w]{4}-[\w]{4}-[\w]{4}-[\w]{12})/final',
+    #     views.RegisterFinalView.as_view(),
+    #     name='registerFinal'),
     url(r'^hotovo', views.hotovo, name='hotovo'),
     url(r'^motivacny_list', views.motivacny_example, name='motivacny_example'),
     url(r'media/(?P<file>.*)', views.upload, name='media'),
