@@ -989,6 +989,11 @@ header .right .fb:hover{
 	vertical-align: middle;
 }
 
+.section-8 .big {
+	font-size: 2em;
+	text-align: center;
+}
+
 @media screen and (max-width:1040px){
 	.section-8 .col{
 		width:100%;
